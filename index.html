@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Photo Editor</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="logo.png" type="image" rel="icon">
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body style="background-color: rgba(9, 74, 82, 0.099);">
+
+        <!--Header-->
+        <header>
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h1 class="header-content">Photo Editor</h1>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <!--Main Section-->
+        <div class="main-section">
+        <div class="container-fluid main">
+            <div class="row">
+                
+                <div class="col-md-6 left-full">
+                    <div class="col-12 left" id="preview-div"> 
+                        <input type="file" id="up-img" accept="image/*" onchange="preview()">
+                        <div class="left-in" onclick="upload()">
+                       
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 right">
+                    <div class="fix-container">
+                        <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="right-heading text-center sticky-top">
+                        <h4>Effects</h4>
+                    </div>
+                    <div class="right-down">
+                    <div class="slide-container text-center">
+                        <p>Opacity</p>
+                        <input type="range" min="0" max="100" class="slider" id="opacity" onchange="myOpacity()">
+                    </div>
+                    <div class="slide-container text-center">
+                        <p>Greyscale</p>
+                        <input type="range" min="0" max="100" class="slider" id="greyscale" onchange="myGreyscale()">
+                    </div>
+                    <div class="slide-container text-center">
+                        <p>Invert</p>
+                        <input type="range" min="0" max="100" class="slider" id="invert" onchange="myInvert()">
+                    </div>
+                    <div class="slide-container text-center">
+                        <p>Saturation</p>
+                        <input type="range" min="0" max="100" class="slider" id="saturate" onchange="mySaturate()">
+                    </div>
+                    <div class="slide-container text-center">
+                        <p>Blur</p>
+                        <input type="range" min="0" max="100" class="slider" id="blur" onchange="myBlur()">
+                    </div>
+                    <div class="slide-container text-center">
+                        <p>Brightness</p>
+                        <input type="range" min="0" max="100" class="slider" id="brightness" onchange="myBrightness()">
+                    </div>
+                    <div class="slide-container text-center">
+                        <p>Contrast</p>
+                        <input type="range" min="0" max="100" class="slider" id="contrast" onchange="myContrast()">
+                    </div>
+                    <div class="slide-container text-center">
+                        <p>Sepia</p>
+                        <input type="range" min="0" max="100" class="slider" id="sepia" onchange="mySepia()">
+                    </div>
+                    <div class="slide-container text-center">
+                        <p>Hue-Rotate</p>
+                        <input type="range" min="0" max="100" class="slider" id="huerotate" onchange="myHuerotate()">
+                    </div>
+                    <div class="slide-container text-center">
+                        <p>Drop-Shadow</p>
+                        <input type="range" min="0" max="100" class="slider" id="dropshadow" onchange="myDropshadow()">
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!--Buttons Section-->
+        <div class="container-fluid">
+            <div class="row">
+            <div class="down text-center w-75">
+                <button type="button" class="btn btn-info btn-md-lg" onclick="load()">Reset</button>
+                <button type="button" class="btn btn-info btn-md-lg dn" onclick="download()">Download</button>
+            </div>
+        </div>
+        </div>
+
+
+        <!--FOOTER-->
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="lead">Developed By: <i>Aayushi Sharma</i></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="aayu.js"></script>
+
+    </body>
+</html>
